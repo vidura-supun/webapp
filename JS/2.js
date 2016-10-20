@@ -77,9 +77,6 @@
   }
 
 
- /* ALERT PLUGIN DEFINITION
-  * ======================= */
-
   var old = $.fn.alert
 
   $.fn.alert = function (option) {
@@ -112,9 +109,6 @@
   "use strict"; // jshint ;_;
 
 
- /* BUTTON PUBLIC CLASS DEFINITION
-  * ============================== */
-
   var Button = function (element, options) {
     this.$element = $(element)
     this.options = $.extend({}, $.fn.button.defaults, options)
@@ -131,7 +125,6 @@
 
     $el[val](data[state] || this.options[state])
 
-    // push to event loop to allow forms to submit
     setTimeout(function () {
       state == 'loadingText' ?
         $el.addClass(d).attr(d, d) :
@@ -149,9 +142,6 @@
     this.$element.toggleClass('active')
   }
 
-
- /* BUTTON PLUGIN DEFINITION
-  * ======================== */
 
   var old = $.fn.button
 
@@ -173,18 +163,14 @@
   $.fn.button.Constructor = Button
 
 
- /* BUTTON NO CONFLICT
-  * ================== */
-
+ 
   $.fn.button.noConflict = function () {
     $.fn.button = old
     return this
   }
 
 
- /* BUTTON DATA-API
-  * =============== */
-
+ 
   $(document).on('click.button.data-api', '[data-toggle^=button]', function (e) {
     var $btn = $(e.target)
     if (!$btn.hasClass('btn')) $btn = $btn.closest('.btn')
@@ -197,8 +183,6 @@
   "use strict"; // jshint ;_;
 
 
- /* CAROUSEL CLASS DEFINITION
-  * ========================= */
 
   var Carousel = function (element, options) {
     this.$element = $(element)
@@ -520,8 +504,7 @@
 }(window.jQuery);
 !function ($) {
 
-  "use strict"; // jshint ;_;
-
+  "use strict"; 
 
  
 
@@ -543,7 +526,6 @@
         , isActive
 
       if ($this.is('.disabled, :disabled')) return
-
       $parent = getParent($this)
 
       isActive = $parent.hasClass('open')
@@ -660,11 +642,8 @@
 
 !function ($) {
 
-  "use strict"; // jshint ;_;
+  "use strict"; 
 
-
- /* MODAL CLASS DEFINITION
-  * ====================== */
 
   var Modal = function (element, options) {
     this.options = options
@@ -882,12 +861,8 @@
 
 !function ($) {
 
-  "use strict"; // jshint ;_;
-
-
- /* TOOLTIP PUBLIC CLASS DEFINITION
-  * =============================== */
-
+  "use strict"; 
+  
   var Tooltip = function (element, options) {
     this.init('tooltip', element, options)
   }
