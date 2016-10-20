@@ -33,7 +33,7 @@
 
 !function ($) {
 
-  "use strict"; // jshint ;_;
+  "use strict";
 
 
 
@@ -50,7 +50,7 @@
 
     if (!selector) {
       selector = $this.attr('href')
-      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') //strip for ie7
+      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '')
     }
 
     $parent = $(selector)
@@ -106,7 +106,7 @@
 
 !function ($) {
 
-  "use strict"; // jshint ;_;
+  "use strict";
 
 
   var Button = function (element, options) {
@@ -180,7 +180,7 @@
 }
 !function ($) {
 
-  "use strict"; // jshint ;_;
+  "use strict"; 
 
 
 
@@ -284,7 +284,7 @@
         this.$element.trigger(e)
         if (e.isDefaultPrevented()) return
         $next.addClass(type)
-        $next[0].offsetWidth // force reflow
+        $next[0].offsetWidth 
         $active.addClass(direction)
         $next.addClass(direction)
         this.$element.one($.support.transition.end, function () {
@@ -364,9 +364,6 @@
 
   "use strict"; // jshint ;_;
 
-
- /* COLLAPSE PUBLIC CLASS DEFINITION
-  * ================================ */
 
   var Collapse = function (element, options) {
     this.$element = $(element)
@@ -1430,7 +1427,7 @@
 
       if (!selector) {
         selector = $this.attr('href')
-        selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') //strip for ie7
+        selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') 
       }
 
       if ( $this.parent('li').hasClass('active') ) return
@@ -1822,8 +1819,6 @@
     return this
   }
 
-
-
   $(document).on('focus.typeahead.data-api', '[data-provide="typeahead"]', function (e) {
     var $this = $(this)
     if ($this.data('typeahead')) return
@@ -1836,8 +1831,6 @@
 !function ($) {
 
   "use strict"; // jshint ;_;
-
-
 
   var Affix = function (element, options) {
     this.options = $.extend({}, $.fn.affix.defaults, options)
