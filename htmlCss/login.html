@@ -3,7 +3,15 @@
        
       
         <title></title>
-        
+        <script>
+		function formval(){
+		var name = document.getElementById('one').value
+		if(name == ""){
+		alert('bitch');
+		return False;
+		}
+		}
+		</script>
    
        
         <link rel="stylesheet" href="css/a_first.css">
@@ -44,13 +52,13 @@
 
 					
 				<br> <br> <br >
-				<!-- add the php -->
+			
 				<table>
 				<form name="loginPHP">
 				<p>
 				<tr>
-				<td style="color:white">NAME: </td> <td><input type="text" name="#" id="one" onclick="func()" ><p id="aaa"> </p></td><br> </tr><tr>
-				<td style="color:white">PASSWORD:</td> <td> <input type="password" name="#" id="#" > </td><br> </p></tr>
+				<td style="color:white">NAME: </td> <td><input type="text" name="nm" id="one" onclick="func()" ><p id="aaa"> </p></td><br> </tr><tr>
+				<td style="color:white">PASSWORD:</td> <td> <input type="password" name="pw" id="pw" > </td><br> </p></tr>
 				</table>
 					    <script>
 						    function func(){
@@ -63,7 +71,7 @@
 						    if(a==null || a " "){
 							    
 				
-				<input type="submit" value="login" name="#">
+				<input type="submit" value="login" name="#" onsubmit="return formval()" />
 				
 				<input type="reset" value="reset" name="#">
 				
