@@ -1,12 +1,20 @@
 <?php
-$fn = _$POST["fn"];
-$ln = _$POST["ln"];
-$ps = crypt(_$POST["ps"]);
-$em = _$POST["em"];
-$fc = _$POST["fc"];
-$si = _$POST["si"];
-$gn = _$POST["gn"];
+$fn = $_POST['fn'];
+$ln = $_POST['ln'];
+$ps = crypt($_POST['ps'], 'sss');
+$em = $_POST['em'];
+$fc = $_POST['fc'];
+$si = $_POST['si'];
+$gn = $_POST['gn'];
 
-$conn = ("127.0.0.1", "root", "expect_us", "User");
-$sql = "INSERT INTO users VALUES('vidu', 'supun', 'pass', 'vidu@aa.com', 'SOC', '036', 'M')"
+$conn = new mysqli("127.0.0.1", "root", "", "user");
+if($conn->connect_error){
+  echo "broken";
+}
+
+$sql = "INSERT INTO users(f_name, l_name, pass, email, faculty, stud_id, gender) VALUES( '$fn', '$ln', '$ps', '$em', '$fc', '$si', '$gn')";
+if($conn -> query($sql)==True){
+  echo "success";
+}
 ?>
+
