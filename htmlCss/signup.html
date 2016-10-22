@@ -12,6 +12,42 @@
     stuId:<input type="text" value="ply-com-099"name="si"/><br>
     gender:<input type="text" value="M" name="gn"/><br>
     <input type="submit"/>
+      
+      
+      <script> 
+          function ValidateEmail()  
+{  
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+if(inputText.value.match(mailformat))  
+{  
+document.form1.text1.focus();  
+return true;  
+}  
+else  
+{  
+alert("You have entered an invalid email address!");  
+document.form1.text1.focus();  
+return false;  
+}  
+}  
+          
+          function CheckPassword()   
+{   
+var ps=  /^[A-Za-z]\w{7,14}$/;  
+if(inputtxt.value.match(ps))   
+{   
+alert('Correct, try another...')  
+return true;  
+}  
+else  
+{   
+alert('Wrong...!')  
+return false;  
+}  
+}  
+     
+      
+      </script>
   </form>
 </body>
 </html>
