@@ -20,7 +20,7 @@
       var fn = /^[A-Za-z]+$/;
       if(inputtxt.value.match(fn))
       {
-      alert('Your first name have accepted : you can try another');
+      alert('Your first name have accepted');
       return true;
       }
       else
@@ -35,7 +35,7 @@
       var ln = /^[A-Za-z]+$/;
       if(inputtxt.value.match(ln))
       {
-      alert('Your last name have accepted : you can try another');
+      alert('Your last name have accepted');
       return true;
       }
       else
@@ -67,12 +67,12 @@ return false;
 var ps=  /^[A-Za-z]\w{7,14}$/;  
 if(inputtxt.value.match(ps))   
 {   
-alert('Correct, try another...')  
+alert('password accepted')  
 return true;  
 }  
 else  
 {   
-alert('Wrong...!')  
+alert('try  another password')  
 return false;  
 }  
 }  
