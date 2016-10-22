@@ -76,6 +76,22 @@ alert('Wrong...!')
 return false;  
 }  
 }  
+          
+          function checkingSid(inputtxt)  
+{   
+var si = /^[0-9a-zA-Z]+$/;  
+if(inputtxt.value.match(si))  
+{  
+alert('Your Student ID number have accepted');  
+document.form1.text1.focus();  
+return true;  
+}  
+else  
+{  
+alert('Please enter a correct student ID number');  
+return false;  
+}  
+}  
      
       
       </script>
