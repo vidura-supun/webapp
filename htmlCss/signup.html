@@ -15,6 +15,37 @@
       
       
       <script> 
+          function validateF_name()
+      { 
+      var fn = /^[A-Za-z]+$/;
+      if(inputtxt.value.match(fn))
+      {
+      alert('Your first name have accepted : you can try another');
+      return true;
+      }
+      else
+      {
+      alert('Please input alphabet characters only');
+      return false;
+      }
+      }
+        
+          function validateL_name()
+      { 
+      var ln = /^[A-Za-z]+$/;
+      if(inputtxt.value.match(ln))
+      {
+      alert('Your last name have accepted : you can try another');
+      return true;
+      }
+      else
+      {
+      alert('Please input alphabet characters only');
+      return false;
+      }
+      }
+          
+                
           function ValidateEmail()  
 {  
 var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
