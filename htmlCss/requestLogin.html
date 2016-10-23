@@ -21,7 +21,7 @@
 			<!--	<img src="C:\Users\U Computers\Desktop\NSBMweb\ATN-RSH-000107\images\NSBM_Light_Blue_WPU_7e09c.png">  -->
 			
 			
-                    <h1><a href="C:\Users\U Computers\Desktop\NSBMweb\ATN-RSH-000107\index.html" style="text-decoration:none">NATIONAL SCHOOL OF BUSINESS MANAGEMENT</a></span></h1>
+                    <h1><a href="#">NATIONAL SCHOOL OF BUSINESS MANAGEMENT</a></span></h1>
 					<h3 style="color:white"> <marquee>the learning management system of national school of business management</marquee>
                 </div>
 				
@@ -40,7 +40,7 @@
 									
 									
                                         <li class="active"><a href="http://nsbm.lk/">Home</a></li>
-                                        <li><a href="C:\Users\U Computers\Desktop\NSBMweb\ATN-RSH-000107\login.html">Login</a></li>
+                                        <li><a href="#">Login</a></li>
                                         <li><a href="#services">Terms & Conditions</a></li>
                                         <li><a href="#work">work</a></li>
                                         <li><a href="#contact">Contact</a></li>
@@ -58,7 +58,7 @@
 					
                 <div class="featured-content">
                    
-					<h1 align="center"> sign in </h1>
+			<h1 align="center"><u>PLEASE FILL IN THE DETAILS </u></h1>
 
        
 						<!-- add the php stuff here-->
@@ -69,15 +69,40 @@
                             <div class="row-fluid">
                                 <div class="row-fluid">
                            
-							
-					<form action="#" method="POST">					
-					<h1 align="l"> FULL NAME:  <input type="text" name="#"> </H1><br>
-					<h1> INDEX NO:<input type="text" name="#"> </H1><br>
-					<h1> BATCH:  <input type="text" name="#"> </H1><br>
-					<h1> DEGREE:   <input type="text" name="#"> </H1><br>
-					<h1> EMAIL ADDRESS  <input type="text" name="#"> </H1><br>
-					<input type="submit" value="submit" >
-					<input type="reset" value="reset">
+					
+					<table align="center">
+					<form action="#" method="POST">	
+						
+						<tr>
+							<td><h1 align="l"> FULL NAME:</td> 
+							<td>  <input type="text" name="#"> </H1><br> </td>
+						</tr>
+					
+					        <tr>
+						<td><h1> INDEX NO:</td>
+						<td> <input type="text" name="#"> </H1><br> </tr>
+				                </tr>
+							 
+						<tr>
+							<td><h1> BATCH: </td>
+							<td><input type="text" name="#"> </H1><br> </td>
+						</tr>
+		    
+		    				<tr>
+							<td><h1> DEGREE: </td>
+							<td><input type="text" name="#"> </H1><br> </td>
+						</tr>
+	    					
+	    					<tr>
+							<td> <h1> EMAIL ADDRESS: </td>
+							<td> <input type="text" name="#"> </H1><br> </td>
+						</tr>
+
+						<tr>
+							<td align="center"><input type="submit" value="submit" > </td>
+							<td align="center"><input type="reset" value="reset"> </td>
+						</tr>
+				</table>
 					
 					
 					
@@ -93,7 +118,87 @@
 				<div>
 				
 
+              <script> 
+          function validateF_name()
+      { 
+      var fn = /^[A-Za-z]+$/;
+      if(inputtxt.value.match(fn))
+      {
+      alert('Your first name have accepted');
+      return true;
+      }
+      else
+      {
+      alert('Please input alphabet characters only');
+      return false;
+      }
+      }
         
+          function validateL_name()
+      { 
+      var ln = /^[A-Za-z]+$/;
+      if(inputtxt.value.match(ln))
+      {
+      alert('Your last name have accepted');
+      return true;
+      }
+      else
+      {
+      alert('Please input alphabet characters only');
+      return false;
+      }
+      }
+          
+                
+          function ValidateEmail()  
+{  
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+if(inputText.value.match(mailformat))  
+{  
+document.form1.text1.focus();  
+return true;  
+}  
+else  
+{  
+alert("You have entered an invalid email address!");  
+document.form1.text1.focus();  
+return false;  
+}  
+}  
+          
+          function CheckPassword()   
+{   
+var ps=  /^[A-Za-z]\w{7,14}$/;  
+if(inputtxt.value.match(ps))   
+{   
+alert('password accepted')  
+return true;  
+}  
+else  
+{   
+alert('try  another password')  
+return false;  
+}  
+}  
+          
+          function checkingSid(inputtxt)  
+{   
+var si = /^[0-9a-zA-Z]+$/;  
+if(inputtxt.value.match(si))  
+{  
+alert('Your Student ID number have accepted');  
+document.form1.text1.focus();  
+return true;  
+}  
+else  
+{  
+alert('Please enter a correct student ID number');  
+return false;  
+}  
+}  
+     
+      
+      </script>
 
       
 

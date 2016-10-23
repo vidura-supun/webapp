@@ -3,7 +3,15 @@
        
       
         <title></title>
-        
+        <script>
+		function formval(){
+		var name = document.getElementById('one').value
+		if(name == ""){
+		alert('bitch');
+		return False;
+		}
+		}
+		</script>
    
        
         <link rel="stylesheet" href="css/a_first.css">
@@ -19,7 +27,7 @@
             <div class="site-header">
                 <div class="logo">
 				
-                     <h1><a href="C:\Users\U Computers\Desktop\NSBMweb\ATN-RSH-000107\index.html" style="text-decoration:none">NATIONAL SCHOOL OF BUSINESS MANAGEMENT</a></span></h1>
+                     <h1><a href="#" style="text-decoration:none">NATIONAL SCHOOL OF BUSINESS MANAGEMENT</a></span></h1>
                 </div>
                 <div class="container">
                 <div class="menu">
@@ -44,16 +52,26 @@
 
 					
 				<br> <br> <br >
-				<!-- add the php -->
+			
 				<table>
 				<form name="loginPHP">
 				<p>
 				<tr>
-				<td style="color:white">NAME: </td> <td><input type="text" name="#" id="#" ></td><br> </tr><tr>
-				<td style="color:white">PASSWORD:</td> <td> <input type="password" name="#" id="#" > </td><br> </p></tr>
+				<td style="color:white">NAME: </td> <td><input type="text" name="nm" id="one" onclick="func()" ><p id="aaa"> </p></td><br> </tr><tr>
+				<td style="color:white">PASSWORD:</td> <td> <input type="password" name="pw" id="pw" > </td><br> </p></tr>
 				</table>
+					    <script>
+						    function func(){
+							    
+							    var a=document.getElementById("one").value.length;
+							    if(a==null || a=" "){
+								    document.getElementById("aaa").innerHTML="<h2> fill the name</h2> ";
+							    }
+					    </script>
+						    if(a==null || a " "){
+							    
 				
-				<input type="submit" value="login" name="#">
+				<input type="submit" value="login" name="#" onsubmit="return formval()" />
 				
 				<input type="reset" value="reset" name="#">
 				

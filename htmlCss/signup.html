@@ -4,14 +4,17 @@
 </head>
 <body>
   <form action="formsub.php" method="post">
-    F_name:<input type="text" value="vidura" name="fn"/><br/>
-    L_name:<input type="text" value="supun" name="ln"/><br/>
-    Password:<input type="password" value="##web123"id="ps"/><br/>
-    Email:<input type="text" value="vidura@gg.com" name="em"/><br/>
+    F_name:<input type="text" value="vidura" name="fn" onclick="validateF_name()"/><br/>
+    L_name:<input type="text" value="supun" name="ln onclick="validateL_name()"/><br/>
+    Password:<input type="password" value="##web123"id="ps onclick="validatecheckpassword()"/><br/>
+    Email:<input type="text" value="vidura@gg.com" name="em" onclick="validateEmail()"/><br/>
     Faculty:<input type="text" value="SOC" name="fc"><br>
-    stuId:<input type="text" value="ply-com-099"name="si"/><br>
+    stuId:<input type="text" value="ply-com-099"name="si" onclick="validatecheckingSid()"/><br>
     gender:<input type="text" value="M" name="gn"/><br>
     <input type="submit"/>
+      
+      
+
   </form>
 </body>
 </html>

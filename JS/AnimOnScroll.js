@@ -1,13 +1,4 @@
-/**
- * animOnScroll.js v1.0.0
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2013, Codrops
- * http://www.codrops.com
- */
+
 ;( function( window ) {
 	
 	'use strict';
@@ -28,7 +19,6 @@
 		return window.pageYOffset || docElem.scrollTop;
 	}
 
-	// http://stackoverflow.com/a/5598797/989439
 	function getOffset( el ) {
 		var offsetTop = 0, offsetLeft = 0;
 		do {
@@ -52,9 +42,7 @@
 			viewed = scrolled + getViewportH(),
 			elTop = getOffset(el).top,
 			elBottom = elTop + elH,
-			// if 0, the element is considered in the viewport as soon as it enters.
-			// if 1, the element is considered in the viewport only when it's fully inside
-			// value in percentage (1 >= h >= 0)
+			
 			h = h || 0;
 
 		return (elTop + elH * h) <= viewed && (elBottom - elH * h) >= scrolled;
@@ -77,12 +65,10 @@
 
 	AnimOnScroll.prototype = {
 		defaults : {
-			// Minimum and a maximum duration of the animation (random value is chosen)
+			
 			minDuration : 0,
 			maxDuration : 0,
-			// The viewportFactor defines how much of the appearing item has to be visible in order to trigger the animation
-			// if we'd use a value of 0, this would mean that it would add the animation class as soon as the item is in the viewport. 
-			// If we were to use the value of 1, the animation would only be triggered when we see all of the item in the viewport (100% of it)
+			
 			viewportFactor : 0
 		},
 		_init : function() {
@@ -110,7 +96,7 @@
 						}
 					} );
 
-					// animate on scroll the items inside the viewport
+				
 					window.addEventListener( 'scroll', function() {
 						self._onScrollFn();
 					}, false );
@@ -172,7 +158,6 @@
 		}
 	}
 
-	// add to global namespace
 	window.AnimOnScroll = AnimOnScroll;
 
 } )( window );
