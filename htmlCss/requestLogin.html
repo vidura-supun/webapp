@@ -74,28 +74,28 @@
 					<form action="#" method="POST">	
 						
 						<tr>
-							<td><h1 align="l"> First Name:</td> 
-							<td>  <input type="text" name="#"> </H1><br> </td>
+							<td><h1 align="l" > First Name:</td> 
+							<td>  <input type="text" id="aa" name="#" onclick="one()"> </H1><br> </td>
 						</tr>
 					
 						<tr>
-							<td><h1 align="l"> Last Name:</td> 
-							<td>  <input type="text" name="#"> </H1><br> </td>
+							<td><h1 align="l" > Last Name:</td> 
+							<td>  <input type="text" name="#" id="bb" onclick=two()"> </H1><br> </td>
 						</tr>
 							 
 						<tr>
 							<td><h1 align="l">Password:</td> 
-							<td>  <input type="password" name="#"> </H1><br> </td>
+							<td>  <input type="password" name="#" > </H1><br> </td>
 						</tr>
 		    
 		    				<tr>
 							<td><h1 align="l">Re-enter Password:</td> 
-							<td>  <input type="password" name="#"> </H1><br> </td>
+							<td>  <input type="password" name="#" > </H1><br> </td>
 						</tr>
 					
 	 					<tr>
 							<td> <h1> EMAIL ADDRESS: </td>
-							<td> <input type="text" name="#"> </H1><br> </td>
+							<td> <input type="text" name="#" onclick="three() id="cc"> </H1><br> </td>
 						</tr>					
 	    
 					        <tr>
@@ -135,6 +135,30 @@
 						</tr>
 				</table>
 					
+								
+								<script>
+								function one(){
+								
+								var a = document.getElementById("aa").value;
+								if(a = null || a=" "){
+								alert("the name cannot be empty");}
+								}
+								
+								function two(){
+								
+								var b = document.getElementById("bb").value;
+								if(b = null || b= " "){
+								alert("this cannot be empty");
+								}
+								}
+								
+								function three(){
+								var c= document.getElementById("c").value;
+									if(c = null || c= " " ){
+										alert("this box cannot be empty")
+									}
+								}
+	</script>
 					
 					
 					</form>
