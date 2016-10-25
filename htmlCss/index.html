@@ -26,6 +26,9 @@ input[type=text] {
     transition: width 0.2s ;
 	
 }
+	     .mySlides{
+		     display:none;
+	     }
 
 input[type=text]:focus {
     width: 100%;
@@ -80,49 +83,29 @@ input[type=text]:focus {
 					
 					
 					<!--add a js to make an image slider --> 
-                    <div class="container">
-                        <div class="banner">
-                            <div id="myCarousel" class="carousel slide">
-                
-                                <div class="carousel-inner">
-                                  <div class="item active">
-                                    <img src="images/Campus photo - please use this.jpg" alt="">
-                                    <div class="carousel-caption">
-                                      <h1>GREEN UNIVERSITY</h1><br>
-                                      <h2>FIRST EVER IN SRI LANKA</h2>
-                                    </div>
-                                  </div>
-                                  <div class="item">
-                                    <img src="images/cGYxpVKbsFUvZ0JoQO1cYwtiKuVCN8pb.jpg" alt="">
-                                    <div class="carousel-caption">
-                                      <h1>GREEN UNIVERSITY</h1><br>
-                                      <h2>FIRST EVER IN SRI LANKA</h2>
-                                    </div>
-                                  </div>
-                                  <div class="item">
-                                    <img src="img/banner-image.png" alt="">
-                                    <div class="images/Campus photo - please use this.jpg">
-                                      <h1>GREEN UNIVERSITY</h1><br>
-                                      <h2>FIRST EVER IN SRI LANKA</h2>
-                                    </div>
-                                  </div>
+                    
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="img_la.jpg" style="width:100%">
+  <img class="mySlides" src="img_ny.jpg" style="width:100%">
+  <img class="mySlides" src="img_chicago.jpg" style="width:100%">
+</div>
 
-                                </div>
-                                <ol class="carousel-indicators">
-                                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                  <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-                                  <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-                                </ol>
-                            </div>
-              
-                        </div>
-                    </div>
-                </div>
-            </div>
+<script>
+var myIndex = 0;
+carousel();
 
-                </div>
-                </div>
-			
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
 			
 			
 			
@@ -151,12 +134,6 @@ input[type=text]:focus {
                     </div>
                 </div>
 
-       <script src="js/jquery-1.9.1.js"></script> 
-<script src="js/bootstrap.js"></script>
-<script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/imagesloaded.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/AnimOnScroll.js"></script>
     
         
 
