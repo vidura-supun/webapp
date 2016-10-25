@@ -33,7 +33,7 @@
 									
 									
                                         <li class="active"><a href="http://nsbm.lk/">Home</a></li>
-                                        <li><a href="C:\Users\U Computers\Desktop\NSBMweb\ATN-RSH-000107\login.html">Login</a></li>
+                                        <li><a href="#">Login</a></li>
                                         <li><a href="#services">Terms & Conditions</a></li>
                                         <li><a href="#work">work</a></li>
                                         <li><a href="#contact">Contact</a></li>
@@ -48,14 +48,29 @@
 				<form name="loginPHP">
 				<p>
 				<tr>
-				<td style="color:white">NAME: </td> <td><input type="text" name="nm" id="one" onclick="func()" ><p id="aaa"> </p></td><br> </tr><tr>
-				<td style="color:white">PASSWORD:</td> <td> <input type="password" name="pw" id="pw" > </td><br> </p></tr>
+				<td style="color:white">NAME: </td> <td><input type="text" name="nm" id="one" onclick="func_one()" ></td><br> </tr><tr>
+				<td style="color:white">PASSWORD:</td> <td> <input type="password" name="pw" id="pw" onclick="func_two()> </td><br> </p></tr>
 					<tr> <td align="center"><a href="#">dont remember your password? </a></tr>
 					
 				</table>
-				
-							    
-				
+				 <script>
+					function func_one(){
+					var a =document.getElementById("one").value;
+					if( a= null || a =" " ){
+					alert("Name must be filled out") ;
+					}
+					}
+					
+					
+					function func_two(){
+					var b = document.getElementById("pw").value;
+					if(b = null || a=" ") {		    
+					alert("Name must be filled out");
+					}
+					}
+					</script>
+					
+					
 				<input type="submit" value="login" name="#" onsubmit="return formval()" />
 				
 				<input type="reset" value="reset" name="#">
